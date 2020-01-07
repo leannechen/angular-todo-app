@@ -2,12 +2,12 @@
   <!--  todo: add item component  -->
   <app-add-item (add)="addItem($event)"></app-add-item>
 
-  <br>
-
-  <ul>
-    <ng-container *ngFor="let item of items">
-      <app-item [item]="item" (remove)="removeItem($event)"></app-item>
-    </ng-container>
-  </ul>
-
+  <div class="list-container">
+    <p class="list-title">All Tasks</p>
+    <ul class="list">
+      <ng-container *ngFor="let item of items">
+        <app-item [item]="item" (remove)="removeItem($event)"></app-item>
+      </ng-container>
+    </ul>
+  </div>
 </div>

@@ -1,3 +1,18 @@
-ul {
-  padding: 0 3rem;
+.list-container {
+  margin: 3rem;
+  background: white;
+}
+
+.list {
+  padding: 0 2rem 0 1rem;
+  border-top: 1px solid #e8e8e8;
+  margin-top: auto;
+}
+
+.list-title {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  border-top: 3px solid #00d6ff;
+  padding: 1.4rem 2rem 1.6rem;
+  margin: 0;
 }

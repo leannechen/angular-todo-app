@@ -14,18 +14,18 @@ export class TodoListComponent implements OnInit {
   constructor(private todoListService: TodoListService) { }
 
   ngOnInit() {
-    // this.items = this.todoListService.get();
+    this.items = this.todoListService.get();
   }
 
   addItem(content: string) {
     if (content) {
-      // this.items = this.todoListService.add(content);
+      this.items = this.todoListService.add(content);
     }
   }
 
   removeItem(id: string) {
    if (confirm('Are you sure you want to remove?')) {
-     // this.items = this.todoListService.remove(id);
+     this.items = this.todoListService.remove(id);
    }
   }
 

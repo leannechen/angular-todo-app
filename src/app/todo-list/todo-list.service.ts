@@ -54,7 +54,8 @@ export class TodoListService {
     if (index < 0) {
       return;
     }
-    Object.assign(this._todoList[index], newItem);
+    // Object.assign(this._todoList[index], newItem);
+    this._todoList[index] = newItem; // 這樣直接改原資料 OK 嗎？
     return this.sync();
   }
 

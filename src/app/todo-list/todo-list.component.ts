@@ -23,6 +23,10 @@ export class TodoListComponent implements OnInit {
     }
   }
 
+  updateItem(todoItem: TodoItem) {
+    this.items = this.todoListService.update(todoItem);
+  }
+
   removeItem(id: string) {
    if (confirm('Are you sure you want to remove?')) {
      this.items = this.todoListService.remove(id);

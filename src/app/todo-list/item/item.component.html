@@ -1,6 +1,10 @@
 <li class="list-item">
   <label>
-    <input type="checkbox" [(ngModel)]="todoItem.isComplete">
+    <input
+      type="checkbox"
+      [checked]="todoItem.isComplete"
+      (click)="updateItem()"
+    >
     <span
       class="list-item-label"
       [ngClass]="{'done': todoItem.isComplete }"

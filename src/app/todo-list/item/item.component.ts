@@ -17,7 +17,11 @@ export class ItemComponent implements OnInit {
   }
 
   updateItem() {
-    this.update.emit(this.todoItem);
+    const updatedItem = {
+      ...this.todoItem,
+      isComplete: !this.todoItem.isComplete,
+    };
+    this.update.emit(updatedItem);
   }
 
   removeItem() {

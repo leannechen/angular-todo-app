@@ -6,7 +6,11 @@
     <p class="list-title">All Tasks</p>
     <ul class="list">
       <ng-container *ngFor="let item of items">
-        <app-item [item]="item" (remove)="removeItem($event)"></app-item>
+        <app-item
+          [item]="item"
+          (remove)="removeItem($event)"
+          (update)="updateItem($event)"
+        ></app-item>
       </ng-container>
     </ul>
   </div>

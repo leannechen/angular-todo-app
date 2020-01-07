@@ -1,9 +1,19 @@
-<p>Add New Item</p>
-<input
-  type="text"
-  [(ngModel)]="newContent"
-  id="newContent"
-  placeholder="What to do?"
-  required
->
-<button (click)="addItem()">SUBMIT</button>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Add New Item
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div>
+    <mat-form-field style="width: 100%;">
+        <input
+          matInput
+          [(ngModel)]="newContent"
+          id="newContent"
+          class="form-control"
+          placeholder="What to do?"
+        />
+    </mat-form-field><br />
+    <button mat-button color="primary" (click)="addItem()">SUBMIT</button>
+  </div>
+</mat-expansion-panel>

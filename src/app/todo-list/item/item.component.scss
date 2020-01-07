@@ -1,0 +1,24 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.btn-delete {
+  float: right;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  color: crimson;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background: crimson;
+    color: white;
+  }
+}

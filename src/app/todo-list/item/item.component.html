@@ -1,9 +1,4 @@
-<mat-card>
-  <mat-card-subtitle>{{ todoItem.date }}</mat-card-subtitle>
-  <mat-card-content>
-    <p>{{ todoItem.content }}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button color="warn" (click)="removeItem()">REMOVE</button>
-  </mat-card-actions>
-</mat-card>
+<li class="list-item">
+  <span>{{ todoItem.content }}</span>
+  <button class="btn-delete" (click)="removeItem()">X</button>
+</li>

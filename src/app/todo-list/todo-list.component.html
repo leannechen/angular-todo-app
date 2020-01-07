@@ -1,5 +1,9 @@
 <div class="todo-list">
   <!--  todo: add item component  -->
+  <app-add-item (add)="addItem($event)"></app-add-item>
+
+  <br>
+
   <ng-container *ngFor="let item of items">
     <app-item [item]="item" (remove)="removeItem($event)"></app-item>
     <br>

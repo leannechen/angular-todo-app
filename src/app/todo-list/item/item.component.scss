@@ -7,6 +7,14 @@
   border-bottom: 1px solid #e8e8e8;
 }
 
+.list-item-label {
+  margin-left: .5rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
 .btn-delete {
   float: right;
   border: 1px solid transparent;

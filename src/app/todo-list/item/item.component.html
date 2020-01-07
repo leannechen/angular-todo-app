@@ -1,4 +1,12 @@
 <li class="list-item">
-  <span>{{ todoItem.content }}</span>
+  <label>
+    <input type="checkbox" [(ngModel)]="todoItem.isComplete">
+    <span
+      class="list-item-label"
+      [ngClass]="{'done': todoItem.isComplete }"
+    >
+      {{ todoItem.content }}
+    </span>
+  </label>
   <button class="btn-delete" (click)="removeItem()">X</button>
 </li>

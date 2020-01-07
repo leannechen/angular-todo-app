@@ -14,17 +14,20 @@ export class TodoListService {
     {
       id: uuid(),
       content: 'Read document',
-      date: new Date().toUTCString()
+      date: new Date().toUTCString(),
+      isComplete: false,
     },
     {
       id: uuid(),
       content: 'Write some code',
-      date: new Date().toUTCString()
+      date: new Date().toUTCString(),
+      isComplete: false,
     },
     {
       id: uuid(),
       content: 'Use Angular Material',
-      date: new Date().toUTCString()
+      date: new Date().toUTCString(),
+      isComplete: false,
     },
   ];
 

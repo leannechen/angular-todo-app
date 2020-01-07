@@ -17,6 +17,7 @@ export class AddItemComponent implements OnInit {
 
   addItem() {
     this.add.emit(this.newContent);
+    this.newContent = '';
   }
 
 }

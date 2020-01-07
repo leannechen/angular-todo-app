@@ -13,22 +13,17 @@ export class TodoListService {
   private _defaultList: TodoItem[] = [
     {
       id: uuid(),
-      content: 'test content 1',
+      content: 'Read document',
       date: new Date().toUTCString()
     },
     {
       id: uuid(),
-      content: 'test content 2',
+      content: 'Write some code',
       date: new Date().toUTCString()
     },
     {
       id: uuid(),
-      content: 'test content 3',
-      date: new Date().toUTCString()
-    },
-    {
-      id: uuid(),
-      content: 'test content 4',
+      content: 'Use Angular Material',
       date: new Date().toUTCString()
     },
   ];

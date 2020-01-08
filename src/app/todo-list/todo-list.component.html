@@ -25,6 +25,13 @@
           (update)="updateItem($event)"
         ></app-item>
       </ng-container>
+      <!--   when no data   -->
+      <li
+        *ngIf="filteredItems.length === 0"
+        class="list-item"
+      >
+        No Data
+      </li>
     </ul>
   </div>
 </div>

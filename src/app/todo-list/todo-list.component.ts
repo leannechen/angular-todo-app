@@ -38,16 +38,19 @@ export class TodoListComponent implements OnInit {
   addItem(content: string) {
     if (content) {
       this.items = this.todoListService.add(content);
+      this.applyFilter();
     }
   }
 
   updateItem(todoItem: TodoItem) {
     this.items = this.todoListService.update(todoItem);
+    this.applyFilter();
   }
 
   removeItem(id: string) {
    if (confirm('Are you sure you want to remove?')) {
      this.items = this.todoListService.remove(id);
+     this.applyFilter();
    }
   }
 

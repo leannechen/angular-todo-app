@@ -46,7 +46,7 @@ export class TodoListService {
       date: new Date().toUTCString(),
       isComplete: false,
     };
-    this._todoList.push(item);
+    this._todoList.unshift(item);
     return this.sync();
   }
 

@@ -3,9 +3,22 @@
   <app-add-item (add)="addItem($event)"></app-add-item>
 
   <div class="list-container">
-    <p class="list-title">All Tasks</p>
+    <div class="list-title-container">
+      <p class="list-title">Tasks</p>
+
+      <select
+        class="list-filter"
+        [(ngModel)]="showFilter"
+        (ngModelChange)="applyFilter()"
+      >
+        <option value="all">Show All</option>
+        <option value="doing">Doing</option>
+        <option value="completed">Completed</option>
+      </select>
+
+    </div>
     <ul class="list">
-      <ng-container *ngFor="let item of items">
+      <ng-container *ngFor="let item of filteredItems">
         <app-item
           [item]="item"
           (remove)="removeItem($event)"

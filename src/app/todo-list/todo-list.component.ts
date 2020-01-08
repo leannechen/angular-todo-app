@@ -10,11 +10,29 @@ import { TodoItem } from './types';
 export class TodoListComponent implements OnInit {
 
   items: TodoItem[];
+  showFilter = 'all';
+  filteredItems: TodoItem[];
 
   constructor(private todoListService: TodoListService) { }
 
   ngOnInit() {
     this.items = this.todoListService.get();
+    this.filteredItems = this.items;
+  }
+
+  applyFilter() {
+    switch (this.showFilter) {
+      case 'doing':
+        this.filteredItems = this.items.filter((item) => item.isComplete === false);
+        break;
+      case 'completed':
+        this.filteredItems = this.items.filter((item) => item.isComplete === true);
+        break;
+      case 'all':
+      default:
+        this.filteredItems = this.items;
+        break;
+    }
   }
 
   addItem(content: string) {

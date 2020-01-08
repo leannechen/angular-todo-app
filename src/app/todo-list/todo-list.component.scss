@@ -9,10 +9,25 @@
   margin-top: auto;
 }
 
-.list-title {
-  text-transform: uppercase;
-  letter-spacing: .1rem;
+.list-title-container {
+  display: flex;
+  justify-content: space-between;
   border-top: 3px solid #00d6ff;
   padding: 1.4rem 2rem 1.6rem;
   margin: 0;
+}
+
+.list-title {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.list-filter {
+  align-self: center;
+
+  &:focus {
+    outline: 2px solid #69e7ff;
+  }
 }

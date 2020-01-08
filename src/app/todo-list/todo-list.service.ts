@@ -13,19 +13,25 @@ export class TodoListService {
   private _defaultList: TodoItem[] = [
     {
       id: uuid(),
-      content: 'Read document',
+      content: '訂車票',
       date: new Date().toUTCString(),
       isComplete: false,
     },
     {
       id: uuid(),
-      content: 'Write some code',
+      content: '準備印章',
       date: new Date().toUTCString(),
       isComplete: false,
     },
     {
       id: uuid(),
-      content: 'Use Angular Material',
+      content: '準備身分證',
+      date: new Date().toUTCString(),
+      isComplete: false,
+    },
+    {
+      id: uuid(),
+      content: '出門投票',
       date: new Date().toUTCString(),
       isComplete: false,
     },

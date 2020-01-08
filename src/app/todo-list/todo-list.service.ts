@@ -43,7 +43,8 @@ export class TodoListService {
     const item = {
       id: uuid(),
       content,
-      date: new Date().toUTCString()
+      date: new Date().toUTCString(),
+      isComplete: false,
     };
     this._todoList.push(item);
     return this.sync();
